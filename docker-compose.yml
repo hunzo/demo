@@ -1,0 +1,23 @@
+version: '3.7'
+services: 
+  golang:
+    build: 
+      context: ./golang
+      dockerfile: Dockerfile
+    ports: 
+      - 8080:8080
+  
+  python:
+    build: 
+      context: ./python
+      dockerfile: Dockerfile 
+    ports: 
+      - 5000:5000
+  
+  nodejs:
+    build: 
+      context: ./node
+      dockerfile: Dockerfile 
+    ports: 
+      - 3000:3000
+    
